@@ -2,11 +2,13 @@ import React, {useState} from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { decrement, increment, incrementByAmount } from './features/counterSlice'
 
+// create counter component that displays the current value of the counter
 function Counter() {
     const count = useSelector((state) => state.counter.value)
     const dispatch = useDispatch()
     const [input, setInput] = useState(0)
 
+    // handle increment button click
     const byAmount = (e) => {
         e.preventDefault()
         dispatch(incrementByAmount(Number(input)))

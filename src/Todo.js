@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { addTodo, removeOne, clearTodo } from './features/todoSlice'
 
+// create todo component that displays the current value of the counter
 function Todo() {
     const items = useSelector((state) => state.todos.items)
     const dispatch = useDispatch()
